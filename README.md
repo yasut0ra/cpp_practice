@@ -75,53 +75,67 @@ GitHub Actions でも同じ確認を回すようにしてあります。
 7. `basics/07_stack_queue_priority_queue.cpp`
 8. `basics/08_two_dimensional_vector.cpp`
 9. `basics/09_recursion_basics.cpp`
+10. `basics/10_class_and_constructor.cpp`
+11. `basics/11_template_function_and_class.cpp`
+12. `basics/12_pointer_and_smart_pointer.cpp`
 
 ### Phase 2: 競プロでよく使う部品
 
-10. `templates/01_competitive_programming_template.cpp`
-11. `templates/02_utility_template.cpp`
+13. `templates/01_competitive_programming_template.cpp`
+14. `templates/02_utility_template.cpp`
 
 ### Phase 3: 基本アルゴリズム
 
-12. `algorithms/01_binary_search.cpp`
-13. `algorithms/02_prefix_sum.cpp`
-14. `algorithms/03_bfs_grid.cpp`
-15. `algorithms/04_union_find.cpp`
-16. `algorithms/05_dijkstra.cpp`
-17. `algorithms/06_dfs_recursive.cpp`
-18. `algorithms/07_dynamic_programming.cpp`
-19. `algorithms/08_topological_sort.cpp`
-20. `algorithms/09_segment_tree.cpp`
-21. `algorithms/10_longest_increasing_subsequence.cpp`
-22. `algorithms/11_warshall_floyd.cpp`
-23. `algorithms/12_graph_bfs.cpp`
-24. `algorithms/13_binary_search_on_answer.cpp`
-25. `algorithms/14_knapsack_dp.cpp`
-26. `algorithms/15_longest_common_subsequence.cpp`
-27. `algorithms/16_greedy_interval_scheduling.cpp`
-28. `algorithms/17_permutation_enumeration.cpp`
+15. `algorithms/01_binary_search.cpp`
+16. `algorithms/02_prefix_sum.cpp`
+17. `algorithms/03_bfs_grid.cpp`
+18. `algorithms/04_union_find.cpp`
+19. `algorithms/05_dijkstra.cpp`
+20. `algorithms/06_dfs_recursive.cpp`
+21. `algorithms/07_dynamic_programming.cpp`
+22. `algorithms/08_topological_sort.cpp`
+23. `algorithms/09_segment_tree.cpp`
+24. `algorithms/10_longest_increasing_subsequence.cpp`
+25. `algorithms/11_warshall_floyd.cpp`
+26. `algorithms/12_graph_bfs.cpp`
+27. `algorithms/13_binary_search_on_answer.cpp`
+28. `algorithms/14_knapsack_dp.cpp`
+29. `algorithms/15_longest_common_subsequence.cpp`
+30. `algorithms/16_greedy_interval_scheduling.cpp`
+31. `algorithms/17_permutation_enumeration.cpp`
+32. `algorithms/18_minimum_spanning_tree_kruskal.cpp`
+33. `algorithms/19_bellman_ford.cpp`
+34. `algorithms/20_strongly_connected_components.cpp`
+35. `algorithms/21_lowest_common_ancestor.cpp`
+36. `algorithms/22_tree_dp_subtree_sum.cpp`
+37. `algorithms/23_bit_dp_tsp.cpp`
+38. `algorithms/24_digit_dp.cpp`
+39. `algorithms/25_kmp_string_search.cpp`
+40. `algorithms/26_z_algorithm.cpp`
 
 ### Phase 4: 数学の基本
 
-29. `math/01_gcd_lcm.cpp`
-30. `math/02_prime_check.cpp`
-31. `math/03_sieve_of_eratosthenes.cpp`
-32. `math/04_prime_factorization.cpp`
-33. `math/05_divisor_enumeration.cpp`
+41. `math/01_gcd_lcm.cpp`
+42. `math/02_prime_check.cpp`
+43. `math/03_sieve_of_eratosthenes.cpp`
+44. `math/04_prime_factorization.cpp`
+45. `math/05_divisor_enumeration.cpp`
+46. `math/06_mod_inverse.cpp`
+47. `math/07_matrix_exponentiation.cpp`
 
 ### Phase 5: 競プロ定番テクニック
 
-34. `competitive/01_fast_io_and_multiple_tests.cpp`
-35. `competitive/02_coordinate_compression.cpp`
-36. `competitive/03_bit_enumeration.cpp`
-37. `competitive/04_two_pointers.cpp`
-38. `competitive/05_mod_pow_and_combination.cpp`
-39. `competitive/06_imos_1d.cpp`
-40. `competitive/07_monotonic_stack.cpp`
-41. `competitive/08_meet_in_the_middle.cpp`
-42. `competitive/09_fenwick_tree.cpp`
-43. `competitive/10_zero_one_bfs.cpp`
-44. `competitive/11_sliding_window_minimum.cpp`
+48. `competitive/01_fast_io_and_multiple_tests.cpp`
+49. `competitive/02_coordinate_compression.cpp`
+50. `competitive/03_bit_enumeration.cpp`
+51. `competitive/04_two_pointers.cpp`
+52. `competitive/05_mod_pow_and_combination.cpp`
+53. `competitive/06_imos_1d.cpp`
+54. `competitive/07_monotonic_stack.cpp`
+55. `competitive/08_meet_in_the_middle.cpp`
+56. `competitive/09_fenwick_tree.cpp`
+57. `competitive/10_zero_one_bfs.cpp`
+58. `competitive/11_sliding_window_minimum.cpp`
 
 ## ファイル一覧
 
@@ -163,6 +177,18 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - 再帰関数
   - base case
   - 小さい問題への分割
+- `10_class_and_constructor.cpp`
+  - `class`
+  - `constructor`
+  - `member function`
+- `11_template_function_and_class.cpp`
+  - `template`
+  - 関数テンプレート
+  - クラステンプレート
+- `12_pointer_and_smart_pointer.cpp`
+  - pointer
+  - `*`, `&`
+  - `unique_ptr`
 
 ### templates
 
@@ -243,6 +269,42 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - `next_permutation`
   - 順列全探索
   - 全パターン列挙
+- `18_minimum_spanning_tree_kruskal.cpp`
+  - 最小全域木
+  - Kruskal 法
+  - Union-Find
+- `19_bellman_ford.cpp`
+  - Bellman-Ford
+  - 負の辺
+  - 負閉路検出
+- `20_strongly_connected_components.cpp`
+  - SCC
+  - Kosaraju 法
+  - 有向グラフの分解
+- `21_lowest_common_ancestor.cpp`
+  - LCA
+  - binary lifting
+  - 木上クエリ
+- `22_tree_dp_subtree_sum.cpp`
+  - Tree DP
+  - 部分木集計
+  - DFS + DP
+- `23_bit_dp_tsp.cpp`
+  - bit DP
+  - TSP
+  - 集合を bit で管理
+- `24_digit_dp.cpp`
+  - digit DP
+  - tight
+  - 桁ごとの状態管理
+- `25_kmp_string_search.cpp`
+  - KMP
+  - prefix function
+  - 文字列検索
+- `26_z_algorithm.cpp`
+  - Z-algorithm
+  - 接頭辞一致長
+  - 文字列前処理
 
 ### math
 
@@ -266,6 +328,14 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - 約数列挙
   - ソート
   - sqrt まで探索
+- `06_mod_inverse.cpp`
+  - mod inverse
+  - 拡張 Euclid
+  - 逆元の存在条件
+- `07_matrix_exponentiation.cpp`
+  - 行列累乗
+  - Fibonacci
+  - 繰り返し二乗法
 
 ### competitive
 
