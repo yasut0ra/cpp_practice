@@ -13,8 +13,16 @@ using namespace std;
     入力:
       a b name
 
-    例:
+    ミニ入力例:
       3 5 Taro
+
+    ミニ出力例:
+      name: Taro
+      sum: 8
+      diff: -2
+      product: 15
+      average: 4.0
+      a_is_even: false
 
     見てほしいポイント:
       - product は int ではなく long long で受けている

@@ -19,6 +19,16 @@ using namespace std;
       閉路がなければトポロジカル順序
       閉路があれば cycle_detected
 
+    ミニ入力例:
+      4 4
+      0 1
+      0 2
+      1 3
+      2 3
+
+    ミニ出力例:
+      topological_order: 0 1 2 3
+
     計算量:
       O(n + m)
 */

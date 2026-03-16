@@ -10,6 +10,10 @@ using namespace std;
       - lower_bound の意味
       - 「ok は常に条件を満たす」「ng は常に条件を満たさない」という不変条件
 
+    直感メモ:
+      - 白黒に塗られた列の「境界線」を探すイメージ
+      - 毎回まんなかを見るので、候補が半分ずつ減っていく
+
     入力:
       n x
       昇順にソート済みの配列 a
@@ -17,8 +21,18 @@ using namespace std;
     出力:
       x 以上の最初の位置
 
+    ミニ入力例:
+      5 6
+      1 3 6 8 10
+
+    ミニ出力例:
+      first_index: 2
+      value: 6
+      lower_bound_index: 2
+
     注意:
       - 二分探索は、対象の配列が単調性を持っていることが前提
+      - 迷ったら「ok 側は正しい、ng 側はまだダメ」を声に出して追う
 */
 
 int first_greater_equal(const vector<int>& a, int x) {
@@ -32,9 +46,11 @@ int first_greater_equal(const vector<int>& a, int x) {
     while (ok - ng > 1) {
         int mid = (ok + ng) / 2;
 
+        // mid が条件を満たすなら、境界線は mid より左側にもありうる。
         if (a[mid] >= x) {
             ok = mid;
         } else {
+            // mid がダメなら、境界線は mid より右側にある。
             ng = mid;
         }
     }

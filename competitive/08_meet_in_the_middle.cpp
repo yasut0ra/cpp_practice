@@ -9,12 +9,23 @@ using namespace std;
       - 半分全列挙 (meet-in-the-middle)
       - 2^n が大きすぎるときに、配列を半分に分ける発想
 
+    直感メモ:
+      - 40 個を一気に見るのは重いので、20 個ずつに割ってから最後に合流する
+      - 「全部を一度に考える」のではなく、「左右の答え候補を持ち寄る」方法
+
     問題設定:
       n 個の重さからいくつか選び、合計を limit 以下で最大化する。
 
     入力:
       n limit
       w0 w1 ... w(n-1)
+
+    ミニ入力例:
+      6 10
+      8 3 5 2 6 4
+
+    ミニ出力例:
+      best_sum: 10
 
     制約感:
       - n <= 40 くらいを想定
@@ -64,6 +75,7 @@ int main() {
         }
 
         long long remain = limit - x;
+        // 右半分から、remain 以下で一番大きい和を探す。
         auto it = upper_bound(right_sums.begin(), right_sums.end(), remain);
         if (it == right_sums.begin()) {
             answer = max(answer, x);

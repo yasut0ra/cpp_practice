@@ -13,6 +13,10 @@ using namespace std;
       - グリッドも頂点と辺の集まりとして扱える
       - queue に入れた順番に広げると最短距離になる
 
+    直感メモ:
+      - 水がスタート地点から 1 マスずつじわじわ広がるイメージ
+      - 先に広がった場所のほうが、必ず距離が短い
+
     入力:
       h w
       grid
@@ -22,6 +26,18 @@ using namespace std;
       G: ゴール
       .: 通れる
       #: 壁
+
+    ミニ入力例:
+      3 4
+      S..#
+      .#..
+      ..G.
+
+    ミニ出力例:
+      4
+
+    つまずきやすい点:
+      - queue から取り出す前に距離を更新するのではなく、入れる時点で訪問済みにする
 */
 
 bool inside(int row, int col, int h, int w) {
@@ -83,6 +99,7 @@ int main() {
                 continue;
             }
 
+            // 次に広がるマスは、今のマスよりちょうど 1 手ぶん遠い。
             dist[next_row][next_col] = dist[row][col] + 1;
             q.push({next_row, next_col});
         }

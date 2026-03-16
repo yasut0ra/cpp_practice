@@ -12,6 +12,10 @@ using namespace std;
       - 遷移式の立て方
       - 復元用の prev 配列
 
+    直感メモ:
+      - 各足場に着くまでの「いま判明している最安値メモ」を前から埋めていく
+      - 未来を全部読むのではなく、次に行ける場所へメモを配る感じ
+
     問題設定:
       足場 0 から足場 n - 1 まで進む。
       i から i + 1 または i + 2 に移動できる。
@@ -21,6 +25,17 @@ using namespace std;
     入力:
       n
       h0 h1 ... h(n-1)
+
+    ミニ入力例:
+      4
+      10 30 40 20
+
+    ミニ出力例:
+      minimum_cost: 30
+      path: 0 1 3
+
+    つまずきやすい点:
+      - dp[i] を「i から先の答え」と見るか「i に着くまでの答え」と見るかを混ぜない
 */
 
 using ll = long long;
@@ -58,6 +73,7 @@ int main() {
 
             ll cost = dp[i] + llabs(height[i] - height[next]);
             if (cost < dp[next]) {
+                // next へ行くより安いルートを見つけたので、メモを書き換える。
                 dp[next] = cost;
                 prev[next] = i;
             }

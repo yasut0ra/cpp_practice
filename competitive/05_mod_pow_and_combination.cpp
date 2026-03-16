@@ -16,6 +16,13 @@ using namespace std;
       nCr(n, r) mod MOD
       base^exponent mod MOD
 
+    ミニ入力例:
+      5 2 3 4
+
+    ミニ出力例:
+      nCr_mod: 10
+      pow_mod: 81
+
     注意:
       - ここでは MOD = 1,000,000,007 を使う
       - MOD が素数だから逆元を a^(MOD-2) で求められる

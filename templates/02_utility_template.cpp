@@ -9,6 +9,15 @@ using namespace std;
       - 汎用関数の切り出し
       - print_vector のような出力補助
       - 座標圧縮を「圧縮結果 + 復元表」で持つ考え方
+
+    ミニ入力例:
+      5
+      100 500 100 300 500
+
+    ミニ出力例:
+      original: 100 500 100 300 500
+      compressed: 0 2 0 1 2
+      restore_table: 100 300 500
 */
 
 template <class T>

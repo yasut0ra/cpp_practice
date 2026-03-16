@@ -17,6 +17,17 @@ using namespace std;
     出力:
       合計、正の数の個数、最初の要素の符号、最初の正の値の位置など
 
+    ミニ入力例:
+      5
+      -2 4 0 7 -1
+
+    ミニ出力例:
+      sum: 8
+      positive_count: 2
+      first_value_sign: -1
+      first_positive_index: 1
+      factorial(min(n, 10)): 120
+
     見てほしいポイント:
       - 役割ごとに関数を分けると main が読みやすくなる
       - while は「条件を満たすまで進める」ときに使いやすい

@@ -17,6 +17,16 @@ using namespace std;
       連結成分の個数
       各頂点がどの成分に属するか
 
+    ミニ入力例:
+      6 3
+      0 1
+      1 2
+      3 4
+
+    ミニ出力例:
+      components: 3
+      component_id: 0 0 0 1 1 2
+
     注意:
       - 深い再帰が発生するグラフでは stack が足りないことがある
       - 競プロでは iterative DFS に切り替える場合もある

@@ -16,6 +16,17 @@ using namespace std;
     入力:
       n
       a0 a1 ... a(n-1)
+
+    ミニ入力例:
+      5
+      100 500 100 300 500
+
+    ミニ出力例:
+      compressed: 0 2 0 1 2
+      restore_table:
+      0 -> 100
+      1 -> 300
+      2 -> 500
 */
 
 template <class T>

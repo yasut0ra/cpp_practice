@@ -17,6 +17,20 @@ using namespace std;
       n
       a0 a1 ... a(n-1)
 
+    ミニ入力例:
+      6
+      4 1 4 2 1 3
+
+    ミニ出力例:
+      original: 4 1 4 2 1 3
+      sorted: 1 1 2 3 4 4
+      unique_values: 1 2 3 4
+      frequencies:
+      1 -> 2
+      2 -> 1
+      3 -> 1
+      4 -> 2
+
     見てほしいポイント:
       - 同じ配列でも、vector / set / map で見え方が変わる
       - map はキー順に走査される

@@ -18,6 +18,14 @@ using namespace std;
       n limit
       w0 w1 ... w(n-1)
 
+    ミニ入力例:
+      4 10
+      6 4 5 3
+
+    ミニ出力例:
+      best_sum: 10
+      chosen_indices: 0 1
+
     注意:
       - 計算量は O(2^n * n)
       - だいたい n <= 20 くらいまでが目安

@@ -11,9 +11,25 @@ using namespace std;
       - 3 重ループ DP
       - 負閉路の検出
 
+    直感メモ:
+      - 「中継点として 0..k を使ってよい世界」を少しずつ広げていく
+      - via を 1 個増やすたびに、通れる寄り道が増える
+
     入力:
       n m
       u v w   (u -> v の有向辺)
+
+    ミニ入力例:
+      3 3
+      0 1 4
+      1 2 1
+      0 2 10
+
+    ミニ出力例:
+      distance_matrix:
+      0 4 5
+      INF 0 1
+      INF INF 0
 
     計算量:
       O(n^3)
@@ -53,6 +69,7 @@ int main() {
                 if (dist[via][to] == INF) {
                     continue;
                 }
+                // from -> to を直接行くより、via を経由したほうが短いか比べる。
                 if (dist[from][to] > dist[from][via] + dist[via][to]) {
                     dist[from][to] = dist[from][via] + dist[via][to];
                 }

@@ -19,6 +19,19 @@ using namespace std;
       1 u v : u と v を連結する
       2 u v : 同じ連結成分か判定する
       3 u   : u が属する成分のサイズを出す
+
+    ミニ入力例:
+      5 5
+      1 0 1
+      1 1 2
+      2 0 2
+      3 1
+      2 3 4
+
+    ミニ出力例:
+      Yes
+      3
+      No
 */
 
 struct UnionFind {

@@ -17,6 +17,19 @@ using namespace std;
       name_0 score_0
       ...
       name_(n-1) score_(n-1)
+
+    ミニ入力例:
+      3 5
+      Taro 60
+      Hanako 75
+      Jiro 75
+
+    ミニ出力例:
+      total_score: 225
+      ranking:
+      Hanako 80
+      Jiro 80
+      Taro 65
 */
 
 struct Student {

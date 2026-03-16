@@ -14,12 +14,32 @@ using namespace std;
       - priority_queue を最小ヒープとして使う
       - parent を持って経路復元する
 
+    直感メモ:
+      - 「いま確定できる中で一番近い頂点」から順に確定していく
+      - BFS の重み付き版だが、距離が小さい順に処理する必要がある
+
     入力:
       n m s
       u v w   (無向辺)
 
+    ミニ入力例:
+      4 4 0
+      0 1 2
+      1 2 3
+      0 2 10
+      2 3 1
+
+    ミニ出力例:
+      distances:
+      0: 0
+      1: 2
+      2: 5
+      3: 6
+      path_to_last_node: 0 1 2 3
+
     注意:
       - 辺の重みは非負であることが前提
+      - 負の辺があると、このやり方は壊れる
 */
 
 using ll = long long;
@@ -63,6 +83,7 @@ int main() {
         auto [current_dist, node] = pq.top();
         pq.pop();
 
+        // 古い情報がキューに残っていることがあるので捨てる。
         if (current_dist != dist[node]) {
             continue;
         }
@@ -70,6 +91,7 @@ int main() {
         for (const auto& edge : graph[node]) {
             ll next_dist = current_dist + edge.cost;
             if (next_dist < dist[edge.to]) {
+                // より短い道を見つけたので更新する。
                 dist[edge.to] = next_dist;
                 parent[edge.to] = node;
                 pq.push({next_dist, edge.to});

@@ -9,6 +9,10 @@ using namespace std;
       - 区間和を O(1) で求める方法
       - 半開区間 [l, r) の扱い
 
+    直感メモ:
+      - prefix[i] は「先頭から i 個ぶんのレシート合計」
+      - 区間和は「大きい合計から小さい合計を引く」だけ
+
     入力:
       n q
       a0 a1 ... a(n-1)
@@ -18,15 +22,32 @@ using namespace std;
       - クエリは 0-indexed
       - 区間は [l, r) なので、r は含まない
 
+    ミニ入力例:
+      4 3
+      5 1 4 2
+      0 2
+      1 4
+      2 3
+
+    ミニ出力例:
+      6
+      7
+      4
+
     例:
       a = [5, 1, 4, 2]
       prefix = [0, 5, 6, 10, 12]
       [1, 4) の和は prefix[4] - prefix[1] = 7
+
+    つまずきやすい点:
+      - prefix[0] = 0 を入れ忘れる
+      - [l, r] と [l, r) を混同する
 */
 
 vector<long long> build_prefix_sum(const vector<long long>& values) {
     vector<long long> prefix(values.size() + 1, 0);
     for (int i = 0; i < static_cast<int>(values.size()); ++i) {
+        // i 番目までの合計ではなく、「i + 1 個ぶんの合計」を入れる。
         prefix[i + 1] = prefix[i] + values[i];
     }
     return prefix;
