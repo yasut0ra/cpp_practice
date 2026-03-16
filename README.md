@@ -4,6 +4,7 @@
 各ファイルは「単体で読める」「単体でコンパイルできる」ことを重視しています。
 
 基本文法から始めて、データ構造、グラフ、動的計画法、競プロ定番テクニックまで順番に積み上げられる構成にしています。
+最近は「まず広く触ってから、あとで深掘る」方針で、基礎トピックをかなり広めに追加しています。
 
 ## 対象読者
 
@@ -69,36 +70,58 @@ GitHub Actions でも同じ確認を回すようにしてあります。
 2. `basics/02_control_flow_and_functions.cpp`
 3. `basics/03_vector_map_set.cpp`
 4. `basics/04_struct_reference_lambda.cpp`
+5. `basics/05_string_operations.cpp`
+6. `basics/06_pair_tuple_and_sort.cpp`
+7. `basics/07_stack_queue_priority_queue.cpp`
+8. `basics/08_two_dimensional_vector.cpp`
+9. `basics/09_recursion_basics.cpp`
 
 ### Phase 2: 競プロでよく使う部品
 
-5. `templates/01_competitive_programming_template.cpp`
-6. `templates/02_utility_template.cpp`
+10. `templates/01_competitive_programming_template.cpp`
+11. `templates/02_utility_template.cpp`
 
 ### Phase 3: 基本アルゴリズム
 
-7. `algorithms/01_binary_search.cpp`
-8. `algorithms/02_prefix_sum.cpp`
-9. `algorithms/03_bfs_grid.cpp`
-10. `algorithms/04_union_find.cpp`
-11. `algorithms/05_dijkstra.cpp`
-12. `algorithms/06_dfs_recursive.cpp`
-13. `algorithms/07_dynamic_programming.cpp`
-14. `algorithms/08_topological_sort.cpp`
-15. `algorithms/09_segment_tree.cpp`
-16. `algorithms/10_longest_increasing_subsequence.cpp`
-17. `algorithms/11_warshall_floyd.cpp`
+12. `algorithms/01_binary_search.cpp`
+13. `algorithms/02_prefix_sum.cpp`
+14. `algorithms/03_bfs_grid.cpp`
+15. `algorithms/04_union_find.cpp`
+16. `algorithms/05_dijkstra.cpp`
+17. `algorithms/06_dfs_recursive.cpp`
+18. `algorithms/07_dynamic_programming.cpp`
+19. `algorithms/08_topological_sort.cpp`
+20. `algorithms/09_segment_tree.cpp`
+21. `algorithms/10_longest_increasing_subsequence.cpp`
+22. `algorithms/11_warshall_floyd.cpp`
+23. `algorithms/12_graph_bfs.cpp`
+24. `algorithms/13_binary_search_on_answer.cpp`
+25. `algorithms/14_knapsack_dp.cpp`
+26. `algorithms/15_longest_common_subsequence.cpp`
+27. `algorithms/16_greedy_interval_scheduling.cpp`
+28. `algorithms/17_permutation_enumeration.cpp`
 
-### Phase 4: 競プロ定番テクニック
+### Phase 4: 数学の基本
 
-18. `competitive/01_fast_io_and_multiple_tests.cpp`
-19. `competitive/02_coordinate_compression.cpp`
-20. `competitive/03_bit_enumeration.cpp`
-21. `competitive/04_two_pointers.cpp`
-22. `competitive/05_mod_pow_and_combination.cpp`
-23. `competitive/06_imos_1d.cpp`
-24. `competitive/07_monotonic_stack.cpp`
-25. `competitive/08_meet_in_the_middle.cpp`
+29. `math/01_gcd_lcm.cpp`
+30. `math/02_prime_check.cpp`
+31. `math/03_sieve_of_eratosthenes.cpp`
+32. `math/04_prime_factorization.cpp`
+33. `math/05_divisor_enumeration.cpp`
+
+### Phase 5: 競プロ定番テクニック
+
+34. `competitive/01_fast_io_and_multiple_tests.cpp`
+35. `competitive/02_coordinate_compression.cpp`
+36. `competitive/03_bit_enumeration.cpp`
+37. `competitive/04_two_pointers.cpp`
+38. `competitive/05_mod_pow_and_combination.cpp`
+39. `competitive/06_imos_1d.cpp`
+40. `competitive/07_monotonic_stack.cpp`
+41. `competitive/08_meet_in_the_middle.cpp`
+42. `competitive/09_fenwick_tree.cpp`
+43. `competitive/10_zero_one_bfs.cpp`
+44. `competitive/11_sliding_window_minimum.cpp`
 
 ## ファイル一覧
 
@@ -120,6 +143,26 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - `struct`
   - 参照渡し / 定数参照
   - ラムダ式によるソート
+- `05_string_operations.cpp`
+  - `string`
+  - `substr`, `find`, `reverse`
+  - 文字列操作
+- `06_pair_tuple_and_sort.cpp`
+  - `pair`, `tuple`
+  - `get<>`
+  - 複数条件ソート
+- `07_stack_queue_priority_queue.cpp`
+  - `stack`
+  - `queue`
+  - `priority_queue`
+- `08_two_dimensional_vector.cpp`
+  - 2 次元 `vector`
+  - 行列入力
+  - 行列集計
+- `09_recursion_basics.cpp`
+  - 再帰関数
+  - base case
+  - 小さい問題への分割
 
 ### templates
 
@@ -176,6 +219,53 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - 全点対最短路
   - 3 重ループ DP
   - 負閉路検出
+- `12_graph_bfs.cpp`
+  - グラフ BFS
+  - 最短路
+  - 経路復元
+- `13_binary_search_on_answer.cpp`
+  - 答えに対する二分探索
+  - 判定関数
+  - 単調性
+- `14_knapsack_dp.cpp`
+  - 0/1 ナップサック
+  - 2 次元 DP
+  - 復元
+- `15_longest_common_subsequence.cpp`
+  - LCS
+  - 文字列 DP
+  - 復元
+- `16_greedy_interval_scheduling.cpp`
+  - 貪欲法
+  - 区間スケジューリング
+  - 終了時刻ソート
+- `17_permutation_enumeration.cpp`
+  - `next_permutation`
+  - 順列全探索
+  - 全パターン列挙
+
+### math
+
+- `01_gcd_lcm.cpp`
+  - `gcd`
+  - `lcm`
+  - 数学の基本演算
+- `02_prime_check.cpp`
+  - 素数判定
+  - 試し割り
+  - 最初の約数
+- `03_sieve_of_eratosthenes.cpp`
+  - エラトステネスのふるい
+  - 素数列挙
+  - 前計算
+- `04_prime_factorization.cpp`
+  - 素因数分解
+  - 指数カウント
+  - 試し割り
+- `05_divisor_enumeration.cpp`
+  - 約数列挙
+  - ソート
+  - sqrt まで探索
 
 ### competitive
 
@@ -208,6 +298,18 @@ GitHub Actions でも同じ確認を回すようにしてあります。
   - 半分全列挙
   - 部分和
   - `n <= 40` 付近の典型
+- `09_fenwick_tree.cpp`
+  - Fenwick Tree
+  - 1 点加算
+  - 区間和
+- `10_zero_one_bfs.cpp`
+  - 0-1 BFS
+  - deque
+  - 0/1 重み最短路
+- `11_sliding_window_minimum.cpp`
+  - スライディングウィンドウ最小値
+  - deque
+  - O(n) 区間最小
 
 ## 勉強のコツ
 
