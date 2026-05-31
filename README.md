@@ -20,6 +20,7 @@
 - 各ファイルにそのまま試せる `ミニ入力例 / ミニ出力例` 付き
 - 重めのテーマには「直感メモ」を入れて、最初の取っかかりを作っている
 - そのまま `g++` でコンパイルして動かせる
+- コメント内のミニ入力例を使って、全ファイルの動作確認をまとめて実行できる
 - 学習順を README に整理している
 
 ## 使い方
@@ -55,12 +56,19 @@ g++ -std=c++17 -O2 -Wall -Wextra basics/01_io_and_types.cpp -o basics01
 ./basics01
 ```
 
+### コメント内のミニ入力例をそのまま実行
+
+```bash
+./scripts/run_sample.sh algorithms/05_dijkstra.cpp
+```
+
 ### 全ファイルまとめて確認
 
 ```bash
 ./scripts/check_all.sh
 ```
 
+全ファイルのコンパイルに加えて、コメント内の `ミニ入力例 / ミニ出力例` が実際の動作と一致するかを確認します。
 GitHub Actions でも同じ確認を回すようにしてあります。
 
 ## 学習ロードマップ
@@ -392,7 +400,8 @@ GitHub Actions でも同じ確認を回すようにしてあります。
 ## 公開向けメモ
 
 - `LICENSE` は MIT にしています
-- `scripts/check_all.sh` で全サンプルのコンパイル確認ができます
+- `scripts/check_all.sh` で全サンプルのコンパイルと動作確認ができます
+- `scripts/run_sample.sh` で 1 ファイル分のミニ入力例をすぐに試せます
 - `.github/workflows/build.yml` で push / pull request 時に自動ビルドします
 
 ## License
