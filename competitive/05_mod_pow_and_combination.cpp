@@ -9,6 +9,20 @@ using namespace std;
       - フェルマーの小定理による逆元
       - factorial / inverse factorial を使った nCr mod MOD
 
+    図解:
+      繰り返し二乗法: exponent を 2 進数で見て、ビットが 1 のところだけ掛ける
+        例: 3^13 (13 = 1101 (2 進)) を下位ビットから処理する
+          bit    :      0      1      2      3
+          13     :      1      0      1      1
+          base   :    3^1    3^2    3^4    3^8    base は毎回 2 乗していく
+          result :    3^1    3^1    3^5   3^13    ビットが 1 のときだけ result に掛ける
+        13 回掛ける代わりに、約 log2(13) 回のループで済む
+        ミニ入力例の 3^4 (4 = 100): base が 3 -> 9 -> 81 と育ち、ビットが立つ 81 が答え
+
+      nCr(5, 2) = 5! / (2! * 3!) = 120 / (2 * 6) = 10
+        mod の世界では割り算ができないので、2! と 3! の逆元 (inv_fact) を掛ける
+        nCr = fact[5] * inv_fact[2] * inv_fact[3]
+
     入力:
       n r base exponent
 

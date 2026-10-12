@@ -14,6 +14,20 @@ using namespace std;
       - 一致に失敗しても、すでに分かっている接頭辞の情報を使って戻り先を決める
       - text の先頭へ戻らず、pattern 内だけを賢くずらす
 
+    図解:
+      pattern = "aba" の prefix function:
+        i       :  0  1  2
+        pattern :  a  b  a
+        pi[i]   :  0  0  1    "aba" の先頭 "a" と末尾 "a" が一致するので pi[2] = 1
+
+      text = "ababa" を左から 1 回だけなめる:
+        index   :  0  1  2  3  4
+        text    :  a  b  a  b  a
+        match 1 :  a  b  a           位置 0 で一致 (matched = 3)
+        match 2 :        a  b  a     matched = pi[2] = 1 から再開 -> 位置 2 で一致
+                         ^
+                         text[2] の "a" は一致済みとして扱い、比べ直さない
+
     入力:
       text
       pattern

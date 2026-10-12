@@ -9,6 +9,18 @@ using namespace std;
       - visited 配列の代わりに component_id を持つ方法
       - 連結成分分解
 
+    図解:
+      グラフと、DFS で塗った component_id:
+
+        (0)---(1)---(2)     (3)---(4)     (5)
+        |_____________|     |_______|     |_|
+             id 0             id 1        id 2
+
+      node 0 から dfs: 0 -> 1 -> 2 を id 0 で塗る
+      node 1, 2 はもう塗られているのでスキップ
+      node 3 から dfs: 3 -> 4 を id 1 で塗る
+      node 5 から dfs: 5 だけを id 2 で塗る
+
     入力:
       n m
       u v   (無向辺)
